@@ -10,3 +10,8 @@ Test: "myOrder should contain my toppings and pizza size"
 Code: pizzaSize = fourteenInch
       checkedBoxes = pepperoni, greenPepper
 Expected Output: PizzaOrder {size: '14' toppings: ['green pepper', 'pepperoni']}                  
+
+Describe: PizzaOrder.prototype.calculateTotal
+Code: pizzaSize = fourteenInch
+      checkedBoxes = pepperoni, greenPepper
+Expected Output: 16

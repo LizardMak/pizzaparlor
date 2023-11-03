@@ -15,6 +15,14 @@ function handleOrder() {
     pizzaToppings.push(checkedBoxes[i].value)
   }
   let myOrder = new PizzaOrder(pizzaSize, pizzaToppings)
-  console.log(myOrder); 
+  let total = myOrder.calculateTotal();
+  console.log(total); 
 }
 
+PizzaOrder.prototype.calculateTotal = function() {
+  let price = parseInt(this.size);
+  for (i = 0; i < this.toppings.length; i++) {
+    price += 1;
+  }
+  return price
+}
