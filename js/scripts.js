@@ -1,13 +1,9 @@
+//Business Logic
+
 function PizzaOrder(size, toppings) {
   this.size = size;
   this.toppings = toppings;
 }
-window.addEventListener("load", function() {
-  this.document.getElementById("pizzaOrder").addEventListener("submit", handleOrder)
-  this.document.getElementById("confirmOrder").addEventListener("click", confirmOrder)
-  this.document.getElementById("reload").addEventListener("click", reloadThePage)
-  this.document.getElementById("cancelOrder").addEventListener("click", cancelOrder)
-})
 
 function handleOrder() {
   event.preventDefault();
@@ -19,16 +15,24 @@ function handleOrder() {
   }
   let myOrder = new PizzaOrder(pizzaSize, pizzaToppings)
   let total = myOrder.calculateTotal();
-  displayTotal(myOrder, total); 
+  displayTotal(myOrder, total);
 }
 
-PizzaOrder.prototype.calculateTotal = function() {
+PizzaOrder.prototype.calculateTotal = function () {
   let price = parseInt(this.size);
   for (i = 0; i < this.toppings.length; i++) {
     price += 1;
   }
   return price
 }
+
+//UI Logic
+window.addEventListener("load", function () {
+  this.document.getElementById("pizzaOrder").addEventListener("submit", handleOrder)
+  this.document.getElementById("confirmOrder").addEventListener("click", confirmOrder)
+  this.document.getElementById("reload").addEventListener("click", reloadThePage)
+  this.document.getElementById("cancelOrder").addEventListener("click", cancelOrder)
+})
 
 function displayTotal(myOrder, total) {
   document.getElementById("menu").setAttribute("class", "hidden");
@@ -48,7 +52,7 @@ function displayTotal(myOrder, total) {
       } else if (i + 2 > myOrder.toppings.length) {
         document.getElementById("insertToppings").append(", and " + myOrder.toppings[i])
       }
-       else {
+      else {
         document.getElementById("insertToppings").append(", " + myOrder.toppings[i])
       }
     }

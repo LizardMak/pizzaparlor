@@ -1,82 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src= "js/scripts.js"></script>
+  <script src="js/scripts.js"></script>
   <link href="css/styles.css" rel="stylesheet" type="text/css">
 </head>
+
 <body class="bodyDefault">
   <div id="placeName" class="header">
     <img src="https://previews.123rf.com/images/albertzig/albertzig1210/albertzig121000477/15626122-3d-cartoon-chef.jpg" width="100">
     <h1>Papa Tony's Pizza</h1>
-   <hr>
-    </div>  
-<div id="menu" class="center">
-  <h3>Select Size</h3>
-  <form id="pizzaOrder">
-    <label for="fourteenInch">14"</label>
-    <input id="fourteenInch" type="radio" name="size" value="14">
-    <br>
-    <label for="eighteenInch">18"</label>
-    <input id="eighteenInch" type="radio" name="size" value="18">
-    <h3>Select Toppings</h3>
-    <label for="greenPepper">Green Peppers</label>
-    <input id="greenPepper" type="checkbox" name="toppings" value="green pepper">
-    <br>
-    <label for="artichoke">Artichoke</label>
-    <input id="artichoke" type="checkbox" name="toppings" value="artichoke">
-    <br>
-    <label for="peppercini">Peppercini</label>
-    <input id="peppercini" type="checkbox" name="toppings" value="peppercini">
-    <br>
-    <label for="whiteOnion">White Onion</label>
-    <input id="whiteOnion" type="checkbox" name="toppings" value="white onion">
-    <br>
-    <label for="blackOlive">Black Olives</label>
-    <input id="blackOlive" type="checkbox" name="toppings" value="black olive">
-    <br>
-    <label for="mushroom">Mushrooms</label>
-    <input id="mushroom" type="checkbox" name="toppings" value="mushroom">
-    <br>
-    <label for="sausage">Sausage</label>
-    <input id="sausage" type="checkbox" name="toppings" value="sausage">
-    <br>
-    <label for="bacon">Bacon</label>
-    <input id="bacon" type="checkbox" name="toppings" value="bacon">
-    <br>
-    <label for="ham">Ham</label>
-    <input id="ham" type="checkbox" name="toppings" value="ham">
-    <br>
-    <label for="meatball">Meatball</label>
-    <input id="meatball" type="checkbox" name="toppings" value="meatball">
-    <br>
-    <label for="pepperoni">Pepperoni</label>
-    <input id="pepperoni" type="checkbox" name="toppings" value="pepperoni">
-    <br><br>
-    <button type="submit">Place Order</button>
-  </form>
-</div>
-<div id="totalPage" class="hidden">
-  <h1>Your total is $<span id="insertTotal"></span>!</h1>
-</div>
-<br>
-<div id="orderRelay" class="hidden">
-  <h3>Your order is:</h3>
-  <p id="insertSize"></p>
+    <hr>
+  </div>
+  <div id="menu" class="center">
+    <h3>Select Size</h3>
+    <form id="pizzaOrder">
+      <label for="fourteenInch">14"</label>
+      <input id="fourteenInch" type="radio" name="size" value="14">
+      <br>
+      <label for="eighteenInch">18"</label>
+      <input id="eighteenInch" type="radio" name="size" value="18">
+      <h3>Select Toppings</h3>
+      <label for="greenPepper">Green Peppers</label>
+      <input id="greenPepper" type="checkbox" name="toppings" value="green pepper">
+      <br>
+      <label for="artichoke">Artichoke</label>
+      <input id="artichoke" type="checkbox" name="toppings" value="artichoke">
+      <br>
+      <label for="peppercini">Peppercini</label>
+      <input id="peppercini" type="checkbox" name="toppings" value="peppercini">
+      <br>
+      <label for="whiteOnion">White Onion</label>
+      <input id="whiteOnion" type="checkbox" name="toppings" value="white onion">
+      <br>
+      <label for="blackOlive">Black Olives</label>
+      <input id="blackOlive" type="checkbox" name="toppings" value="black olive">
+      <br>
+      <label for="mushroom">Mushrooms</label>
+      <input id="mushroom" type="checkbox" name="toppings" value="mushroom">
+      <br>
+      <label for="sausage">Sausage</label>
+      <input id="sausage" type="checkbox" name="toppings" value="sausage">
+      <br>
+      <label for="bacon">Bacon</label>
+      <input id="bacon" type="checkbox" name="toppings" value="bacon">
+      <br>
+      <label for="ham">Ham</label>
+      <input id="ham" type="checkbox" name="toppings" value="ham">
+      <br>
+      <label for="meatball">Meatball</label>
+      <input id="meatball" type="checkbox" name="toppings" value="meatball">
+      <br>
+      <label for="pepperoni">Pepperoni</label>
+      <input id="pepperoni" type="checkbox" name="toppings" value="pepperoni">
+      <br><br>
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+  <div id="totalPage" class="hidden">
+    <h1>Your total is $<span id="insertTotal"></span>!</h1>
+  </div>
   <br>
-  <p id="insertToppings"></p>
-  <button id="reload">Uh, nevermind...</button>
-  <button id="confirmOrder">Sounds good!</button>
-</div>
-<div id="approvedPage" class="hidden">
-<h1>✅ Approved!</h1>
-<p>Your food will be ready in <span id="waitTime"></span>!</p>
-<button id="cancelOrder">Cancel Order</button>
-</div>
+  <div id="orderRelay" class="hidden">
+    <h3>Your order is:</h3>
+    <p id="insertSize"></p>
+    <br>
+    <p id="insertToppings"></p>
+    <button id="reload">Uh, nevermind...</button>
+    <button id="confirmOrder">Sounds good!</button>
+  </div>
+  <div id="approvedPage" class="hidden">
+    <h1>✅ Approved!</h1>
+    <p>Your food will be ready in <span id="waitTime"></span>!</p>
+    <button id="cancelOrder">Cancel Order</button>
+  </div>
 
-<h1 id="canceledOrder" class="hidden">We understand :(</h1>
+  <h1 id="canceledOrder" class="hidden">We understand :(</h1>
 
 </body>
+
 </html>
