@@ -33,7 +33,8 @@ PizzaOrder.prototype.calculateTotal = function() {
 function displayTotal(myOrder, total) {
   document.getElementById("menu").setAttribute("class", "hidden");
   document.getElementById("insertTotal").append(total);
-  document.getElementById("totalPage").setAttribute("class", "total")
+  document.getElementById("totalPage").setAttribute("class", "total");
+  document.querySelector("body").setAttribute("class", "bodyWhite");
   if (myOrder.size === "14") {
     document.getElementById("insertSize").append("14 inch")
   } else {
