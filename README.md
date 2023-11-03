@@ -24,7 +24,6 @@ _{This website is a mock page for a fake pizza place called 'Papa Tony's', you c
 * _Start blank project in VSCode_
 * _Clone GitHub repo to VSCode using terminal_
 * _Press 'go live' in the bottom right_
-* _format_
 
 ## Known Bugs
 
