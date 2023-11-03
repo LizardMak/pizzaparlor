@@ -16,7 +16,7 @@ function handleOrder() {
   }
   let myOrder = new PizzaOrder(pizzaSize, pizzaToppings)
   let total = myOrder.calculateTotal();
-  displayTotal(total); 
+  displayTotal(myOrder, total); 
 }
 
 PizzaOrder.prototype.calculateTotal = function() {
@@ -26,9 +26,21 @@ PizzaOrder.prototype.calculateTotal = function() {
   }
   return price
 }
-//
-function displayTotal(total) {
+
+function displayTotal(myOrder, total) {
   document.getElementById("menu").setAttribute("class", "hidden");
   document.getElementById("insertTotal").append(total);
   document.getElementById("totalPage").setAttribute("class", "total")
+  if (myOrder.size === "14") {
+    document.getElementById("insertSize").append("14 inch")
+  } else {
+    document.getElementById("insertSize").append("18 inch")
+  }
+  if (myOrder.toppings.length > 0) {
+    document.getElementById("insertToppings").append("Cheese with ")
+    
+  } else {
+    document.getElementById("insertToppings").append("Cheese")
+  }
+  document.getElementById("orderRelay").setAttribute("class", "center")
 }
