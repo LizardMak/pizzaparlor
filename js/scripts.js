@@ -38,7 +38,16 @@ function displayTotal(myOrder, total) {
   }
   if (myOrder.toppings.length > 0) {
     document.getElementById("insertToppings").append("Cheese with ")
-    
+    for (i = 0; i < myOrder.toppings.length; i++) {
+      if (i === 0) {
+        document.getElementById("insertToppings").append(myOrder.toppings[i])
+      } else if (i + 2 > myOrder.toppings.length) {
+        document.getElementById("insertToppings").append(", and " + myOrder.toppings[i])
+      }
+       else {
+        document.getElementById("insertToppings").append(", " + myOrder.toppings[i])
+      }
+    }
   } else {
     document.getElementById("insertToppings").append("Cheese")
   }
