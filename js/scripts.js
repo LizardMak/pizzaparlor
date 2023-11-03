@@ -26,7 +26,7 @@ PizzaOrder.prototype.calculateTotal = function() {
   }
   return price
 }
-
+//
 function displayTotal(total) {
   document.getElementById("menu").setAttribute("class", "hidden");
   document.getElementById("insertTotal").append(total);
