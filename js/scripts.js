@@ -14,6 +14,7 @@ function handleOrder() {
   for (i = 0; i < checkedBoxes.length; i++) {
     pizzaToppings.push(checkedBoxes[i].value)
   }
-  console.log(pizzaSize);
-  console.log(pizzaToppings);
+  let myOrder = new PizzaOrder(pizzaSize, pizzaToppings)
+  console.log(myOrder); 
 }
+
