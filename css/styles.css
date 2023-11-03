@@ -8,3 +8,10 @@
 .center {
   text-align:center;
 }
+.redBackground {
+  background-color: maroon;
+}
+.white {
+  color:white;
+  text-align:center;
+}

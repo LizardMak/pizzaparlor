@@ -4,6 +4,9 @@ function PizzaOrder(size, toppings) {
 }
 window.addEventListener("load", function() {
   this.document.getElementById("pizzaOrder").addEventListener("submit", handleOrder)
+  this.document.getElementById("confirmOrder").addEventListener("click", confirmOrder)
+  this.document.getElementById("reload").addEventListener("click", reloadThePage)
+  this.document.getElementById("cancelOrder").addEventListener("click", cancelOrder)
 })
 
 function handleOrder() {
@@ -52,4 +55,33 @@ function displayTotal(myOrder, total) {
     document.getElementById("insertToppings").append("Cheese")
   }
   document.getElementById("orderRelay").setAttribute("class", "center")
+}
+
+function confirmOrder() {
+  document.getElementById("totalPage").setAttribute("class", "hidden");
+  document.getElementById("orderRelay").setAttribute("class", "hidden");
+  let waitTime = Math.floor(Math.random() * 5)
+  if (waitTime === 0) {
+    document.getElementById("waitTime").append("20 minutes")
+  } else if (waitTime === 1) {
+    document.getElementById("waitTime").append("40 minutes")
+  } else if (waitTime === 2) {
+    document.getElementById("waitTime").append("1 hour")
+  } else if (waitTime === 3) {
+    document.getElementById("waitTime").append("2 hours")
+  } else {
+    document.getElementById("waitTime").append("3 hours")
+  }
+  document.getElementById("approvedPage").setAttribute("class", "center")
+}
+
+function reloadThePage() {
+  location.reload();
+}
+
+function cancelOrder() {
+  document.getElementById("approvedPage").setAttribute("class", "hidden");
+  document.getElementById("placeName").setAttribute("class", "hidden");
+  document.querySelector("body").setAttribute("class", "redBackground");
+  document.getElementById("canceledOrder").setAttribute("class", "white")
 }

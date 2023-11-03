@@ -8,8 +8,8 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <h1>Papa Tony's Pizza</h1>
-<div id="menu">
+  <h1 class="center" id="placeName">Papa Tony's Pizza</h1>
+<div id="menu" class="center">
   <h3>Select Size</h3>
   <form id="pizzaOrder">
     <label for="fourteenInch">14"</label>
@@ -63,7 +63,16 @@
   <p id="insertSize"></p>
   <br>
   <p id="insertToppings"></p>
+  <button id="reload">Uh, nevermind...</button>
+  <button id="confirmOrder">Sounds good!</button>
 </div>
+<div id="approvedPage" class="hidden">
+<h1>✅ Approved!</h1>
+<p>Your food will be ready in <span id="waitTime"></span>!</p>
+<button id="cancelOrder">Cancel Order</button>
+</div>
+
+<h1 id="canceledOrder" class="hidden">We understand :(</h1>
   
 </body>
 </html>
