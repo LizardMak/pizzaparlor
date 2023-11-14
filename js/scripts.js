@@ -5,19 +5,6 @@ function PizzaOrder(size, toppings) {
   this.toppings = toppings;
 }
 
-function handleOrder() {
-  event.preventDefault();
-  const pizzaSize = document.querySelector("input[name=size]:checked").value;
-  let pizzaToppings = [];
-  let checkedBoxes = document.querySelectorAll("input[name=toppings]:checked")
-  for (i = 0; i < checkedBoxes.length; i++) {
-    pizzaToppings.push(checkedBoxes[i].value)
-  }
-  let myOrder = new PizzaOrder(pizzaSize, pizzaToppings)
-  let total = myOrder.calculateTotal();
-  displayTotal(myOrder, total);
-}
-
 PizzaOrder.prototype.calculateTotal = function () {
   let price = parseInt(this.size);
   for (i = 0; i < this.toppings.length; i++) {
@@ -89,4 +76,22 @@ function cancelOrder() {
   document.getElementById("placeName").setAttribute("class", "hidden");
   document.querySelector("body").setAttribute("class", "redBackground");
   document.getElementById("canceledOrder").setAttribute("class", "white")
+}
+
+function handleOrder() {
+  event.preventDefault();
+  if (document.querySelector("input[name=size]:checked") == null) {
+    window.document.getElementById("errorMessage").setAttribute("class", "red")
+  } else {
+  window.document.getElementById("errorMessage").setAttribute("class", "hidden")
+  const pizzaSize = document.querySelector("input[name=size]:checked").value;
+  let pizzaToppings = [];
+  let checkedBoxes = document.querySelectorAll("input[name=toppings]:checked")
+  for (i = 0; i < checkedBoxes.length; i++) {
+    pizzaToppings.push(checkedBoxes[i].value)
+  }
+  let myOrder = new PizzaOrder(pizzaSize, pizzaToppings)
+  let total = myOrder.calculateTotal();
+  displayTotal(myOrder, total);
+}
 }
